@@ -41,6 +41,7 @@
                     </constraints>
                     <properties>
                       <text value="Close"/>
+                      <toolTipText value="Zatvori"/>
                     </properties>
                   </component>
                 </children>
@@ -51,27 +52,30 @@
                 </constraints>
                 <properties>
                   <text value="Save New"/>
+                  <toolTipText value="Snimi Novi Fajl"/>
                 </properties>
               </component>
-              <component id="5209f" class="javax.swing.JButton" binding="buttonOpen">
+              <component id="5209f" class="javax.swing.JButton" binding="buttonOpenTop">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <text value="Open Top"/>
+                  <toolTipText value="Otvori Fajl Gore"/>
                 </properties>
               </component>
-              <component id="b9114" class="javax.swing.JButton">
+              <component id="b9114" class="javax.swing.JButton" binding="buttonOpenBottom">
                 <constraints>
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <text value="Open Bottom"/>
+                  <toolTipText value="Otvori Fajl Dole"/>
                 </properties>
               </component>
             </children>
           </grid>
-          <grid id="7152a" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="7152a" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="true" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -88,7 +92,11 @@
                 <children>
                   <component id="cc6f8" class="javax.swing.JTextArea" binding="textAreaTop">
                     <constraints/>
-                    <properties/>
+                    <properties>
+                      <lineWrap value="false"/>
+                      <text value=""/>
+                      <wrapStyleWord value="false"/>
+                    </properties>
                   </component>
                 </children>
               </scrollpane>
@@ -101,26 +109,31 @@
                 <children>
                   <component id="c655c" class="javax.swing.JTextArea" binding="textAreaBottom">
                     <constraints/>
-                    <properties/>
+                    <properties>
+                      <lineWrap value="false"/>
+                      <wrapStyleWord value="false"/>
+                    </properties>
                   </component>
                 </children>
               </scrollpane>
-              <component id="dfd20" class="javax.swing.JButton" binding="buttonGetSelection">
+              <component id="dfd20" class="javax.swing.JButton" binding="buttonGetSelectionTop">
                 <constraints>
                   <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <label value="Top -&gt; New"/>
                   <text value="Top -&gt; New"/>
+                  <toolTipText value="Kopiraj Gornji Oznaceni Teskt"/>
                 </properties>
               </component>
-              <component id="2978b" class="javax.swing.JButton">
+              <component id="2978b" class="javax.swing.JButton" binding="buttonGetSelectionBottom">
                 <constraints>
                   <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <label value="Bottom -&gt; New"/>
                   <text value="Bottom -&gt; New"/>
+                  <toolTipText value="Kopiraj Donji Oznaceni Tekst"/>
                 </properties>
               </component>
             </children>
@@ -139,7 +152,10 @@
                     <preferred-size width="150" height="50"/>
                   </grid>
                 </constraints>
-                <properties/>
+                <properties>
+                  <lineWrap value="true"/>
+                  <wrapStyleWord value="true"/>
+                </properties>
               </component>
             </children>
           </grid>
