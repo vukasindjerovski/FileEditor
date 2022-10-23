@@ -33,6 +33,7 @@
                 </constraints>
                 <properties>
                   <text value="Close"/>
+                  <toolTipText value="Zatvori"/>
                 </properties>
               </component>
             </children>
@@ -43,6 +44,7 @@
             </constraints>
             <properties>
               <text value="Save"/>
+              <toolTipText value="Snimi Fajl"/>
             </properties>
           </component>
           <component id="e7465" class="javax.swing.JButton" binding="buttonOpen">
@@ -51,6 +53,7 @@
             </constraints>
             <properties>
               <text value="Open"/>
+              <toolTipText value="Otvori fajl"/>
             </properties>
           </component>
           <component id="ccb0b" class="javax.swing.JButton" binding="buttonGetSelection">
@@ -60,6 +63,7 @@
             <properties>
               <label value="Get Selection"/>
               <text value="Get Selection"/>
+              <toolTipText value="Dodaj Selektovani Tekst"/>
             </properties>
           </component>
         </children>
@@ -86,7 +90,9 @@
             <children>
               <component id="c36e3" class="javax.swing.JTextArea" binding="textArea">
                 <constraints/>
-                <properties/>
+                <properties>
+                  <wrapStyleWord value="true"/>
+                </properties>
               </component>
             </children>
           </scrollpane>

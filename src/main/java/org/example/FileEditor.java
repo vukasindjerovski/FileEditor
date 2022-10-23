@@ -9,20 +9,20 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileEditor extends JDialog {
-    private JPanel contentPane;
-    private JButton buttonOpen;
-    private JButton buttonClose;
-    private JButton buttonSave;
-    private JTextArea textArea;
-    private JButton buttonGetSelection;
+    private JPanel contentPane; //
+    private JButton buttonOpen; // Button Open
+    private JButton buttonClose; // Button Close
+    private JButton buttonSave; // Button Close
+    private JTextArea textArea; // Text Area, dodat wordWrap
+    private JButton buttonGetSelection; // Button Get Selection
     String directory; // The default directory to display in the FileDialog
-    String selection;
+    String selection; // String selection
     public FileEditor() {
         setContentPane(contentPane);
         setModal(true);
     //    getRootPane().setDefaultButton(buttonOpen);
 
-        buttonOpen.addActionListener(new ActionListener() {
+        buttonOpen.addActionListener(new ActionListener() { //
             public void actionPerformed(ActionEvent e) {
                 onButtonOpen();
             }
@@ -58,7 +58,7 @@ public class FileEditor extends JDialog {
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
     }
-
+    // Snimanje texta u fajl
     public void saveFile(String directory, String filename) {
         if ((filename == null) || (filename.length() == 0))
             return;
@@ -86,6 +86,8 @@ public class FileEditor extends JDialog {
             }
         }
     }
+
+    // Prikaz teksta
 
     public void loadAndDisplayFile(String directory, String filename) {
         if ((filename == null) || (filename.length() == 0))
@@ -121,7 +123,7 @@ public class FileEditor extends JDialog {
             }
         }
     }
-
+    // Opet Button
     private void onButtonOpen() {
         // Create a file dialog box to prompt for a new file to display
         FileDialog f = new FileDialog(this, "Otvori fajl", FileDialog.LOAD);
@@ -132,7 +134,7 @@ public class FileEditor extends JDialog {
         loadAndDisplayFile(directory, f.getFile()); // Load and display selection
         f.dispose(); // Get rid of the dialog box
     }
-
+    // Save Button
     private void onButtonSave() {
         // Create a file dialog box to prompt for a new file to display
         FileDialog f = new FileDialog(this, "Otvori fajl", FileDialog.SAVE);
@@ -143,15 +145,16 @@ public class FileEditor extends JDialog {
         saveFile(directory, f.getFile()); // Load and display selection
         f.dispose(); // Get rid of the dialog box
     }
-
+    // Close Button
     private void onButtonClose() {
         // add your code here if necessary
         dispose();
     }
-
+    // Get Selection Button
     private void onButtonGetSelection()
     {
-        selection = textArea.getSelectedText();
+        selection = textArea.getSelectedText(); // getSelectedText vraca selektovina tekst u TEXT komponenti
+        textArea.append(selection); // dodaje dat tekst na kraj dokumenta
     }
 
     public static void main(String[] args) {

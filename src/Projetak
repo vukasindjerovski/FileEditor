@@ -1,0 +1,19 @@
+Projekat
+Preuzeti projekat sa Moodle portala (sekcija Projekat). Napraviti nalog na GitHub-u (ukoliko vec nemate).
+Pokrenuti projekat kod sebe, napraviti lokalni i javni udaljeni repozitorijum na Git-u i smestiti kod u udaljeni
+repozitorijum.
+
+Napraviti posebnu granu na udaljenom repozitorijumu izvedenu iz master, čije će ime biti vlastito ime i
+prezime svakog polaznika kursa.
+
+U ovoj grani treba prepraviti postojeći projekat tako da se omogući da se istovremeno otvore dva fajla,
+jedan u tekstualnom polju u gornjem delu prozora, drugi u tekstualnom polju u donjem delu prozora.
+Potrebno je implementirati dva Open tastera.
+
+U programu treba da se omoguci selekcija dela teksta u jednom tekstualnom polju editora (npr. gore),
+njegovo kopiranje na kraj teksta u tekstualnom polju editora na desnoj strani. Takođe, treba omogućiti i
+operaciju kopiranja selekcije iz donjeg tekstualnog polja u tekstualno polje na desnoj strani editora.
+Predloženi izgled interfejsa je dat na slici 1.
+
+Program treba da omogući čuvanje tekućeg stanja teksta koji se nalazi u tekstualnom polju na desnoj strani
+editora u fajlu čije ime definiše korisnik programa.
